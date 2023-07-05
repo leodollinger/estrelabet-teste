@@ -21,7 +21,7 @@ async function bot(){
         await page.goto('https://estrelabet.com/ptb/bet/detail-search');
         await page.waitForSelector("#dropSelectSportype > li:nth-child(1) > a");
     }
-    await new Promise(r => setTimeout(r, 10000));
+    await new Promise(r => setTimeout(r, 5000));
     await page.waitForSelector("#cookies-bottom-modal > div > div.flex-container.content > a");
     await page.evaluate(() => document.querySelector("#cookies-bottom-modal > div > div.flex-container.content > a").click());
     await page.waitForSelector("#dropSelectSportype > li:nth-child(1) > a");
