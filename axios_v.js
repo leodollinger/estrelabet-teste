@@ -37,7 +37,8 @@ let apiData = responseData.data[0]
 let myTeam = "cruzeiro",
     opposingTeam = null,
     dateTime = null,
-    dateTimeStr = null,
+    dateStr = null,
+    timeStr = null,
     winOdd = null,
     tieOdd = null,
     defeatOdd = null,
@@ -51,10 +52,10 @@ for(let x = 0; x < apiData.cs[0].sns.length; x++){
             let timeStamp = partidas.fsd
             dateTime = new Date(timeStamp)
             
-            dateTimeStr = [dateTime.getDate(),
+            dateStr = [dateTime.getDate(),
             dateTime.getMonth()+1,
-            dateTime.getFullYear()].join('/')+' '+
-            [dateTime.getHours(),
+            dateTime.getFullYear()].join('/');
+            timeStr = [dateTime.getHours(),
             dateTime.getMinutes(),
             dateTime.getSeconds()].join(':');
 
@@ -71,7 +72,8 @@ for(let x = 0; x < apiData.cs[0].sns.length; x++){
             }
             let matchData = {
                 "opposingTeam": opposingTeam,
-                "dateTimeStr": dateTimeStr,
+                "dateStr": dateStr,
+                "timeStr": timeStr,
                 "timeStamp": timeStamp,
                 "winOdd": parseFloat(winOdd),
                 "tieOdd": parseFloat(tieOdd),
