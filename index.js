@@ -14,7 +14,7 @@ async function bot(){
                 "--no-first-run",
             ],
             ignoreHTTPSErrors: true,
-            headless: false
+            headless: true
         });
         const page = await browser.newPage();
         try{
