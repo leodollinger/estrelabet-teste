@@ -9,6 +9,7 @@
   "author": "Leonardo Dollinger",
   "license": "ISC",
   "dependencies": {
+    "@types/axios": "^0.14.0",
     "puppeteer": "^20.7.4"
   },
   "type": "module"
